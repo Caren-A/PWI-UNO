@@ -1,0 +1,90 @@
+body{
+    background: linear-gradient(rgb(109, 109, 239), rgb(255, 185, 197));
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+.cabecera h1{
+    position: absolute;
+    padding-left: 350px; 
+}
+
+.cabecera h2{
+    position: absolute;
+    padding-left: 460px;
+    padding-top: 45px;
+}
+
+
+.foto-perfil img{
+    display: flex;
+    width: 250px;
+    margin-top: 50px;
+}
+
+.sobre-Mi{
+    padding-top: 30px;
+}
+
+.tecnologias{
+    text-align: justify;
+}
+.tecnologias, .formacion,.tabla-exp, .formulario{
+    padding-top: 10px;
+}
+
+table{
+    
+    flex-direction: column;
+    margin: 0px 80px 20px 80px;
+}
+
+thead{
+    background: rgb(124, 75, 109);
+    color: white;
+    font-weight: bold;
+}
+
+th, td{
+    border: 1px solid rgb(95, 35, 76);;
+    padding: 6px 15px; /*espacio interno y laterales*/
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+textarea{
+    margin-top: 10px;
+}
+
+.input-padron{
+    display: block;
+    margin: 10px;
+    padding: 15px; /*para cambiar el espaciado interno, entre el contenido y el borde.*/
+    width: 62%;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px;
+    margin: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: rgb(127, 58, 105);
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer; 
+}
+
+.enviar:hover{
+    background: rgb(113, 29, 86); /*color al que cambiará al pasar el mouse por encima*/
+    transform: scale(1.0); /*aumenta el boton*/
+}
