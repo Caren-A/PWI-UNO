@@ -6,7 +6,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Curriculum Vitae</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     </head>
 
        
@@ -37,23 +39,23 @@
 
             <section class="tecnologias">
                 
-                <h1><em>Tecnologias</em></h1>
+                <h1><em>Tecnologías</em></h1>
                 <ul>    
-                    <li>Java</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>SQL</li>
-                    <li>PhotoShop</li>
-                    <li>AdobeXD</li>
-                    <li>Figma</li>
-                    <li>Jira</li>
+                   <li><box-icon name='java' type='logo' animation='tada'></box-icon></box-icon></i></i> Java</li> 
+                    <li><box-icon name='html5' type='logo' animation='tada' ></box-icon> HTML</li>
+                    <li><box-icon name='css3' type='logo' animation='tada' ></box-icon> CSS</li>
+                    <li><box-icon name='javascript' type='logo' animation='tada' ></box-icon> JavaScript</li>
+                    <li><box-icon name='postgresql' type='logo' animation='tada' ></box-icon>SQL</li>
+                    <li><box-icon name='camera' animation='tada' ></box-icon> PhotoShop</li>
+                    <li><box-icon name='adobe' type='logo' animation='tada' ></box-icon> AdobeXD</li>
+                    <li><box-icon name='figma' type='logo' animation='tada' ></box-icon> Figma</li>
+                    <li><box-icon name='book-content' type='solid' animation='tada'></box-icon> Jira</li>
                 </ul>
             </section>
 
             <section>
                 <div class="formacion">
-                    <h1><em>Formación Academica</em></h1>
+                    <h1><em>Formación Académica</em></h1>
                     <p>Licenciatura en Informática - <b>UNO</b></p>
                     <p>Tecnicatura en Desarrollo Web - <b>UNO</b></p>
                 </div>
@@ -61,7 +63,6 @@
                 <h1><em>Experiencia Laboral</em></h1>
             </section>
             
-
                 <table>
                     <thead>
                         <tr>
@@ -90,25 +91,48 @@
                    
                 </table>
  
-            <section>
-                    <form>
-                        <h1><em>¡Contactarme!</em></h1>
+                <section>
+                    <h1><em>¡Contactarme!</em></h1>
+                    
+                    <form class="formulario" id="formulario">
+                    
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa" class="input-padron" maxlength="30" required>
+
                         <label for="apellidoNombre">Apellido y Nombre</label>
-                        <input type="text" id="apellidoNombre" class="input-padron" required>
+                        <input type="text" id="apellidoNombre" class="input-padron" maxlength="20" required>
                        
-                        <label for="correo">Correo Electronico</label>
-                        <input type="email" id="correo" class="input-padron" required placeholder="email@gmail.com">
-                       
-                        <label for="telefono">Telefono de Contacto</label>
-                        <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) 1111 2222">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" class="input-padron" size="40" placeholder="email@gmail.com" required pattern="[^\s@]+@[^\s@]+\.[a-zA-Z]{2,3}" title="Por favor, introduce un dominio válido (ejemplo: .com, .ar)">
+                        
+                        <label for="telefono">Teléfono de Contacto</label>
+                        <input type="tel" id="telefono" class="input-padron" minlength="10" maxlength="11" placeholder="(XX) 1111 2222" required>
+
+                        <label for="sueldo">Sueldo</label>
+                        <input type="number" id="sueldo" class="input-padron" placeholder="$" required min="150000">
                        
                         <label for="mensaje">Deje un Mensaje</label>
                         <textarea cols="70" rows="10" id="mensaje"></textarea>
                        
-                        <input type="submit" value="¡Enviar Formulario!" class="enviar">
+                        <button type="submit" class="enviar">¡Enviar Formulario!</button>
+                        <button type="reset" class="borrar">Limpiar Formulario</button>
                     </form>
-            </section>
-       
-    </body>
 
+                    <table  id="tablita">
+                        <thead>
+                            <tr>
+                                <th onclick="sortTable(0)">Empresa</th> 
+                                <th onclick="sortTable(1)">Sueldo</th>
+                                <th>USD</th>
+                                <th>EURO</th>
+                                
+                            </tr>
+                        </thead>
+
+                    </table>
+
+                </section>
+
+                <script src="validaciones.js"></script>
+</body>
 </html>
